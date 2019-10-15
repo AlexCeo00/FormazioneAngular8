@@ -1,0 +1,85 @@
+<style>
+  .login-container{
+    align:center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .login-form-1{
+    padding: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  }
+  .login-form-1 h3{
+    text-align: center;
+    color: #333;
+  }
+
+  .login-container form{
+    padding: 10%;
+  }
+  .btnSubmit
+  { align-content: center;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    border: none;
+    cursor: pointer;
+  }
+  .login-form-1 .btnSubmit{
+    font-weight: 600;
+    color: #fff;
+    background-color: #0062cc;
+  }
+</style>
+
+<!--<div *ngIf="error" class="alert alert-danger">{{error}}</div>-->
+<!--<h2>Login</h2>-->
+<!--<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">-->
+<!--  <div class="form-group">-->
+<!--    <label id="username" for="username">Username</label>-->
+<!--    <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />-->
+<!--    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">-->
+<!--      <div *ngIf="f.username.errors.required">Username is required</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label for="password">Password</label>-->
+<!--    <input id="password" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />-->
+<!--    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">-->
+<!--      <div *ngIf="f.password.errors.required">Password is required</div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--      <app-button [configurazione]="ConfigLogin" [configurazioneClasse]="clConfig[0]" >-->
+<!--    </app-button>-->
+<!--    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>-->
+<!--  </div>-->
+<!--</form>-->
+<div class="container login-container">
+  <div>
+    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
+    <div class="md-6 login-form-1">
+      <h3>Login</h3>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label id="username" for="username">Username</label>
+          <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+          <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <app-button [configurazione]="ConfigLogin" [configurazioneClasse]="clConfig[0]" >
+          </app-button>
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+/*!* Pagination links *!*/
+/*.pagination a {*/
+/*  color: black;*/
+/*  !*float: left;*!*/
+/* !* padding: 8px 16px;*!*/
+/*  text-decoration: none;*/
+/*  transition: background-color .3s;*/
+/*}*/
+
+/*!* Style the active/current link *!*/
+/*.pagination a.active {*/
+/*  background-color: dodgerblue;*/
+/*  color: white;*/
+/*}*/
+
+/*!* Add a grey background color on mouse-over *!*/
+/*.pagination a:hover:not(.active) {background-color: #ddd;}*/
+/*table {*/
+/*  margin-left: auto;*/
+/*  margin-right: auto;*/
+/*  justify-content: center;*/
+/*  font-family: arial, sans-serif;*/
+/*  border-collapse: collapse;*/
+/*  width: 100%;*/
+/*}*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 98% !important;
+  margin-right: auto!important;
+  margin-left: auto!important;
+  justify-content: center;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  vertical-align: text-top;
+}
+
+.divbuttons{
+  display: inline-block;
+}

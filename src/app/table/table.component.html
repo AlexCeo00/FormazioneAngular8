@@ -1,0 +1,66 @@
+  <table class="table table-bordered" >
+    <thead>
+      <tr class="col">
+        <th [class.active]="order === getHeadervalues()[i]" (click)="orderelementiCopia(getKeyvalues()[i],order,reverse)" *ngFor="let head of getHeadervalues(); let i = index ">
+          <p>{{head}}<span *ngIf="getKeyvalues()[i] === order" [hidden]="reverse">▼</span
+          ><span *ngIf="getKeyvalues()[i] === order" [hidden]="!reverse">▲</span></p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr class="col" *ngFor="let el of elementiCopia">
+      <td *ngFor="let e of getKeyvalues()">
+        <p>{{_.get(el,e,'')}}</p>
+        <div class="divbuttons"  *ngFor="let conf of configurazione; let index = index">
+<!--        <p *ngFor="let cnf of conf"></p>-->
+         <app-button *ngIf="e == 'azione'" (click)="onCustomAction(conf, el.id)" [configurazione]="conf" [configurazioneClasse]="configurazionecl[index]"></app-button>&nbsp;
+<!--          <input type="hidden" *ngIf="configurazione.text == 'Modifica'" value="{{elementiCopia.id}}"/>-->
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <br>
+<!--  <div class="container btn-toolbar" role="toolbar">-->
+<!--    <div class="row d-inline-flex">-->
+<!--      <div class="col p-2 ">-->
+<!--        <label>Pagina {{currentIndex}}/{{pageNumber}}</label>-->
+<!--      </div>-->
+<!--      <div class="btn-group d-inline-flex" style="margin:0 auto;">-->
+<!--        <ul class="pagination">-->
+<!--          <li class="page-item" [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}" ><a class="page-link"  (click)="prevPage()" href="#">Precedente</a></li>-->
+<!--          <li class="page-item" *ngFor="let page of pagesIndex"  [ngClass]="{'active': (currentIndex == page)}">-->
+<!--            <a class="page-link" (click)="setPage(page)" href="#" >{{page}}</a>-->
+<!--          </li>-->
+<!--          <li class="page-item" [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}" ><a class="page-link"  (click)="nextPage()" href="#">Successiva</a></li>-->
+<!--        </ul>-->
+<!--        <div class="col d-inline-flex">-->
+<!--          <select (change)="selectNumber($event.target.options.selectedIndex)" class="form-control">-->
+<!--            <option *ngFor="let item of selectNumeriPerPagina">{{item}} Elementi per Pagina</option>-->
+<!--          </select>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <label>Pagina {{currentIndex}}/{{pageNumber}}</label>
+      </div>
+      <div class="col-6">
+        <ul class="pagination">
+          <li class="page-item" [ngClass]="{'disabled': (currentIndex == 1 || pageNumber == 0)}" ><a class="page-link"  (click)="prevPage()" href="javascript:">Precedente</a></li>
+          <li class="page-item" *ngFor="let page of pagesIndex"  [ngClass]="{'active': (currentIndex == page)}">
+            <a class="page-link" (click)="setPage(page)" href="javascript:" >{{page}}</a>
+          </li>
+          <li class="page-item" [ngClass]="{'disabled': (currentIndex == pageNumber || pageNumber == 0)}" ><a class="page-link"  (click)="nextPage()" href="javascript:">Successiva</a></li>
+        </ul>
+      </div>
+      <div class="col-3">
+        <select (change)="selectNumber($event.target.options.selectedIndex)" class="form-control">
+          <option *ngFor="let item of selectNumeriPerPagina">{{item}} Elementi per Pagina</option>
+        </select>
+      </div>
+    </div>
+  </div>

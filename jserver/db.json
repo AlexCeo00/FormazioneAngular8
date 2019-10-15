@@ -1,0 +1,60 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nome": "Marco Rossi",
+      "email": "mrossi@mail.it",
+      "passut": 123,
+      "tipologia": "Admin",
+      "datan": "09/01/1976"
+    },
+    {
+      "id": 2,
+      "nome": "Marco Bianchi",
+      "email": "mbianchi@mail.it",
+      "passut": 123,
+      "tipologia": "Admin",
+      "datan": "09/01/1976"
+    },
+    {
+      "id": 3,
+      "nome": "rRossi",
+      "email": "rrossi@mail.it",
+      "passut": 123,
+      "tipologia": "Admin",
+      "datan": "09/01/1976"
+    },
+    {
+      "id": 4,
+      "nome": "gianRossi",
+      "email": "gianrossi@mail.it",
+      "passut": 123,
+      "tipologia": "Admin",
+      "datan": "09/01/1976"
+    },
+    {
+      "id": 4,
+      "nome": "rnRossi",
+      "email": "rrrtbossi@mail.it",
+      "passut": 123,
+      "tipologia": "Admin",
+      "datan": "09/01/1976"
+    },
+    {
+      "id": 5,
+      "nome": "brfi",
+      "email": "rrossi@mail.it",
+      "passut": 123,
+      "tipologia": "Admin",
+      "datan": "09/01/1976"
+    },
+    {
+      "id": 6,
+      "nome": "rnnreossi",
+      "email": "rtntjurossi@mail.it",
+      "passut": 123,
+      "tipologia": "Admin",
+      "datan": "09/01/1976"
+    }
+  ]
+}

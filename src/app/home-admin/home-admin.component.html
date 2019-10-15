@@ -1,0 +1,5 @@
+<br>
+<!--<input type="text" id="searchTextId" name="searchText" placeholder="Search By Name">-->
+<app-table *ngIf="this.utenti != null" [elements]="utenti" [headElements]="headElements" [configurazione]="arrConf" [configurazionecl]="clConfig"></app-table>
+<br>
+<!--passare "elements" invece che "utenti" per sfruttare gli elementi già scritti e non passati dal json server oppure lasciare utenti ma facendo partire il jserver con npm run jserver-->

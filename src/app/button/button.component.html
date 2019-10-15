@@ -1,0 +1,12 @@
+<!--<button [ngStyle]="{-->
+<!--  height: configuration?.height +'px',-->
+<!--  width: configuration?.width +'px',-->
+<!--  background: 'url(' + configuration?.image + ')'-->
+<!--  }">{{configuration?.text}}</button>-->
+
+<button [disabled]="loading" [class]="configurazioneClasse?.text" [ngStyle]="{
+  height: configurazione?.height + 'px',
+  width: configurazione?.width + 'px',
+  background: configurazione?.image ? 'url(' + configurazione?.image + ')' : null
+  }"><i class="material-icons">{{configurazione?.icona}}</i>{{configurazione?.text}}</button>
+<!--<ng-content></ng-content> per unire piu contenuti insieme-->

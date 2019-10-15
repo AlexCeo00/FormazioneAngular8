@@ -1,0 +1,51 @@
+<h2 align="center">User Management</h2>
+<div align="center">
+    <form #userFrom="ngForm" (ngSubmit)="onSubmit()">
+  <table border="1" cellpadding="5">
+    <caption>
+      <h2>
+          Modifica Utente
+      </h2>
+    </caption>
+      <input type="hidden" name="id"/>
+    <tr>
+      <th><label for="nome">Nome</label></th>
+      <td >
+        <input id="nome" class="form-control" type="text" [(ngModel)]="this.User.nome" name="nome" size="45"/>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="email">Email:</label> </th>
+      <td>
+        <input id="email" class="form-control" type="text" [(ngModel)]="this.User.email" name="email" size="45"/>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="passut">Password: </label></th>
+      <td >
+        <input id="passut" class="form-control" type="text" name="passut" [(ngModel)]="this.User.passut" size="15"/>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="tipologia">Seleziona il Ruolo: </label></th>
+      <td >
+        <select class="form-control" id="tipologia" name="tipologia" [(ngModel)]="this.User.tipologia">
+          <option value="Admin">Amministratore</option>
+          <option value="Customer">Customer</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <th><label for="datan">Data di Nascita: </label></th>
+      <td >
+        <input id="datan" class="form-control" type="date" name="datan" min="1900-1-31" [(ngModel)]="this.User.datan"><br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input class="btn btn-primary" type="submit" value="Save" />
+      </td>
+    </tr>
+  </table>
+  </form>
+</div>
